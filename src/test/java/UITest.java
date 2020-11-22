@@ -11,14 +11,13 @@ import steps.HomeSteps;
 import steps.LoginSteps;
 
 
+import java.io.IOException;
+
 import static com.codeborne.selenide.Selenide.open;
-import static io.restassured.RestAssured.given;
 
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class UITest {
-    public static WebDriver driver;
-    public static LoginPage loginPage;
 
     @Test
     @Order(1)
@@ -74,5 +73,10 @@ public class UITest {
         BoardSteps.openChangeBg();
         BoardSteps.openChangeBgColors();
         BoardSteps.selectGreenBg();
+    }
+    @Test
+    @Order(7)
+    public void delete() throws IOException {
+        refresh.refrechSite();
     }
 }

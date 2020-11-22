@@ -6,8 +6,7 @@ import java.io.IOException;
 import static io.restassured.RestAssured.given;
 
 class refresh {
-    @Test
-    void refrechSite() throws IOException {
+    static void refrechSite() throws IOException {
         String idBoard = fileUtils.getFileValue("id");
         given()
                 .header("Accept", "application/json")

@@ -4,9 +4,9 @@ import org.apache.commons.codec.digest.DigestUtils;
 import java.sql.*;
 
 public class DB {
-    public static void main(String[]args){
-        connectAndWritePass();
-    }
+//    public static void main(String[]args){
+//        connectAndWritePass();
+//    }
 
     public static void connectAndWritePass() {
         Connection connection;
