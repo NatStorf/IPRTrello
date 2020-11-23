@@ -1,9 +1,11 @@
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import pages.LoginPage;
 import steps.BoardSteps;
 import steps.CardSteps;
@@ -24,9 +26,11 @@ public class UITest {
     public void login() throws InterruptedException {
         System.out.println("----------------------------------Начало теста----------------------------------");
         System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
-        Configuration.timeout = 6000;
-        Configuration.startMaximized = true;
-        open("https://trello.com/login");
+        WebDriver griver = new ChromeDriver();
+        Selenide.open("https://trello.com/login");
+//        Configuration.timeout = 6000;
+//        Configuration.startMaximized = true;
+//        open("https://trello.com/login");
         LoginSteps.login("Storf1@yandex.ru", "90idASwda1Y2");
         Thread.sleep(10000);
     }
