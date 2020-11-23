@@ -23,7 +23,7 @@ public class UITest {
     @Order(1)
     public void login() throws InterruptedException {
         System.out.println("----------------------------------Начало теста----------------------------------");
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
         Configuration.timeout = 6000;
         Configuration.startMaximized = true;
         open("https://trello.com/login");
